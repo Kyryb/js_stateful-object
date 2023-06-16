@@ -19,7 +19,7 @@ function transformState(state, actions) {
         removeProperties(state, keysToRemove);
         break;
       default:
-        return 'Uknown property was found';
+        return 'Uknown action was found';
     }
   }
 }
