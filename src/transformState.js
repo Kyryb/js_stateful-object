@@ -10,7 +10,7 @@ function transformState(state, actions) {
 
     switch (type) {
       case 'addProperties':
-        addProperties(state, extraData);
+        Object.assign(state, extraData);
         break;
       case 'clear':
         clearObject(state);
@@ -22,10 +22,6 @@ function transformState(state, actions) {
         return 'Uknown property was found';
     }
   }
-}
-
-function addProperties(target, properties) {
-  Object.assign(target, properties);
 }
 
 function clearObject(target) {
